@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Sho-CardCapsNF';
+    src: url('fonts/Sho-CardCapsNF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: Sho-CardCapsNF;
+	/*font: arial;*/
+	color: #00FF00;
+	background: url("images/JingleBells_game_background.jpg");
+}
+img.chipsLeft{
+	visibility:hidden;
+	position:absolute;
+	top:460px;
+	left:340px;
+}
+img.chipsCenter1{
+	visibility:hidden;
+	position:absolute;
+	top:450px;
+	left:480px;
+}
+img.chipsCenter2{
+	visibility:hidden;
+	position:absolute;
+	top:440px;
+	left:640px;
+}
+img.chipsRight{
+	visibility:hidden;
+	position:absolute;
+	top:460px;
+	left:800px;
+}
+
+
+.left {
+	position: relative;
+	float: left;
+	margin-top: 5px;
+	width: 20%;
+	height: 200px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 64px;
+
+}
+
+.right {
+	position: relative;
+	float: right;
+	margin-top: 5px;
+	width: 20%;
+	height: 200px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 64px;
+}

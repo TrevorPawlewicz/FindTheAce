@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!-- Trevor Pawlewicz -->
+<!-- Project #1-->
+
+<!-- Goals - to make a fun project that incorporates the following:
+	1) preload images.
+	2) utilize random function for psuedo random effect.
+	3) utilize setTimeout/clearTimeout for "shuffle" animation.
+	4) utilize the "onClick" event to pass a value (this) to a function from a graphic.
+	5) using various "for" loops to to populate arrays and values.
+	6) utilizing Boolean values to handle click events.
+	7) using style properties to postion and display graphics.
+	8) utilizing getElementById() to changethe visibilty of images -->
+
+<html>
+	<head>
+		<title>Find the Ace!</title>
+		<link rel='stylesheet' href='style.css'/>
+	</head>
+
+	<body bgColor="#009900" onload="instructions()">
+	<!--
+	<audio controls loop>
+		<source src="horse.ogg" type="audio/ogg">
+		<source src="horse.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	-->
+	<div class="left" id="player1">Player 1<p id="player1score"></p></div>
+	<div class="right" id="player2">Player 2<p id="player2score"></p></div>
+
+		<center>
+			<h1>&nbsp;&nbsp;Find the Ace!</h1>
+			<form name="game" action="" method="" >
+			<img name="displayLeft" id="displayLeft"
+				src="images/cardBlue.jpg"
+				border=5
+				width="187" height="262" onclick="pickCard(this.name);">
+			<img name="displayCenter" id="displayCenter"
+				src="images/cardRed.jpg"
+				border=5
+				width="187" height="262" onclick="pickCard(this.name);">
+			<img name="displayRight" id="displayRight"
+				src="images/cardBlue.jpg"
+				border=5
+				width="187" height="262" onclick="pickCard(this.name);">
+			<p>
+			<input type="button" id="dealCards"
+				value="Deal Cards"
+				onClick="randomCard()"/>
+			<br /><br />
+		    <input type=button value="Start Shuffle"
+		           onClick="return startSlideShow();"/>
+		    <input type=button value="Stop Shuffle"
+		           onClick="return stopSlideShow();"/>
+			<p>
+			</form>
+		</center>
+
+		<img name="chipsLeft" id="chipsLeft" class="chipsLeft"
+			src="images/poker_chipsLeft.jpg"
+			width="163" height="138">
+		<img name="chipsCenter1" id="chipsCenter1" class="chipsCenter1"
+			src="images/poker_chipsLeft.jpg"
+			width="163" height="138">
+		<img name="chipsCenter2" id="chipsCenter2" class="chipsCenter2"
+			src="images/poker_chipsRight.jpg"
+			width="163" height="138">
+		<img name="chipsRight" id="chipsRight" class="chipsRight"
+			src="images/poker_chipsRight.jpg"
+			width="163" height="138">
+
+	</body>
+	<script type="text/javascript" src="app.js"></script>
+</html>
