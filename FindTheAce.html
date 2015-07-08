@@ -11,66 +11,77 @@
 	5) using various "for" loops to to populate arrays and values.
 	6) utilizing Boolean values to handle click events.
 	7) using style properties to postion and display graphics.
-	8) utilizing getElementById() to changethe visibilty of images -->
+	8) utilizing getElementById() to change the visibilty of images -->
 
 <html>
 	<head>
 		<title>Find the Ace!</title>
-		<link rel='stylesheet' href='style.css'/>
+		<link rel="stylesheet" href="style.css"/>
+		<!-- animation stylesheet -->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!-- modal stylesheet -->
+    	<link rel="stylesheet" href="css/modal-window.css" />
 	</head>
 
 	<body bgColor="#009900" onload="instructions()">
-	<!--
-	<audio controls loop>
-		<source src="horse.ogg" type="audio/ogg">
-		<source src="horse.mp3" type="audio/mpeg">
+		<!--
+	<audio>
+		<source id="introMusic" src="audio/09 SHADOW OF THE COLOSSUS.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>
-	-->
-	<div class="left" id="player1">Player 1<p id="player1score"></p></div>
-	<div class="right" id="player2">Player 2<p id="player2score"></p></div>
+-->
+	<div class="left" id="player1"><span>Player</span> 1<p id="player1score"></p></div>
+	<div class="right" id="player2"><span>Player</span> 2<p id="player2score"></p></div>
 
 		<center>
-			<h1>&nbsp;&nbsp;Find the Ace!</h1>
-			<form name="game" action="" method="" >
-			<img name="displayLeft" id="displayLeft"
-				src="images/cardBlue.jpg"
-				border=5
-				width="187" height="262" onclick="pickCard(this.name);">
-			<img name="displayCenter" id="displayCenter"
-				src="images/cardRed.jpg"
-				border=5
-				width="187" height="262" onclick="pickCard(this.name);">
-			<img name="displayRight" id="displayRight"
-				src="images/cardBlue.jpg"
-				border=5
-				width="187" height="262" onclick="pickCard(this.name);">
-			<p>
-			<input type="button" id="dealCards"
-				value="Deal Cards"
-				onClick="randomCard()"/>
-			<br /><br />
-		    <input type=button value="Start Shuffle"
-		           onClick="return startSlideShow();"/>
-		    <input type=button value="Stop Shuffle"
-		           onClick="return stopSlideShow();"/>
-			<p>
+			<h1>Find the Ace!</h1>
+			<form name="game" action="" method="">
+				<img name="displayLeft" id="displayLeft"
+					src="images/cardBlue.jpg">
+				<img name="displayCenter" id="displayCenter"
+					src="images/cardRed.jpg">
+				<img name="displayRight" id="displayRight"
+					src="images/cardBlue.jpg">
+				<p></p>
+				<input type="button" id="dealCards"
+					value="Deal Cards"/>
+				<br /><br />
+			    <input type=button id="shuffleDeck"
+					value="---- Shuffle ----"
+			        onClick="return startSlideShow();"/>
+
+			    <!-- <input type=button value="Stop Shuffle"
+			           onClick="return stopSlideShow();"/> -->
+				<p></p>
 			</form>
 		</center>
 
-		<img name="chipsLeft" id="chipsLeft" class="chipsLeft"
-			src="images/poker_chipsLeft.jpg"
-			width="163" height="138">
-		<img name="chipsCenter1" id="chipsCenter1" class="chipsCenter1"
-			src="images/poker_chipsLeft.jpg"
-			width="163" height="138">
-		<img name="chipsCenter2" id="chipsCenter2" class="chipsCenter2"
-			src="images/poker_chipsRight.jpg"
-			width="163" height="138">
-		<img name="chipsRight" id="chipsRight" class="chipsRight"
-			src="images/poker_chipsRight.jpg"
-			width="163" height="138">
+		<img name="chipsFarLeft" id="chipsFarLeft" class="chips"
+			src="images/poker_chipsLeft.jpg">
+		<img name="chipsLeft" id="chipsLeft" class="chips"
+			src="images/poker_chipsLeft.jpg">
+		<img name="chipsCenter1" id="chipsCenter1" class="chips"
+			src="images/poker_chipsLeft.jpg">
+		<img name="chipsCenter3" id="chipsCenter3" class="chips"
+			src="images/poker_chipsLeft.jpg">
+		<img name="chipsCenter2" id="chipsCenter2" class="chips"
+			src="images/poker_chipsRight.jpg">
+		<img name="chipsCenter4" id="chipsCenter4" class="chips"
+			src="images/poker_chipsRight.jpg">
+		<img name="chipsRight" id="chipsRight" class="chips"
+			src="images/poker_chipsRight.jpg">
+		<img name="chipsFarRight" id="chipsFarRight" class="chips"
+			src="images/poker_chipsRight.jpg">
+
+		<!-- modal window -->
+		<div id="share-options">
+			<img src="images/cardsIntro.jpg" width="800" height="720" alt="Play!" id="message" />
+		</div>
 
 	</body>
-	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<!-- modal scripts -->
+	<script src="js/jquery-2.1.4.js"></script>
+    <script src="js/modal-window.js"></script>
+    <script src="js/modal-init.js"></script>
 </html>
