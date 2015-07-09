@@ -12,6 +12,10 @@ body {
     text-shadow: 5px 5px 4px #000;
 }
 
+#winnerText {
+    font-size: 128px;
+}
+
 input[type="button"] {
     background-color: #FF0000;
     color: #ffffff;

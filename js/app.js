@@ -273,13 +273,25 @@ function tallyScore() {
 
 	if ((player1score >= 10) && (player2score < 10)){
 		document.getElementById("player1score").innerHTML = "Wins $" + player1score;
+		document.getElementById("winnerText").innerHTML = "Player 1 Wins!";
+		removeChips();
 	} else if ((player2score >= 10) && (player1score < 10)) {
 		document.getElementById("player2score").innerHTML = "Wins $" + player2score;
+		document.getElementById("winnerText").innerHTML = "Player 2 Wins!";
+		removeChips();
 	} else if ((player2score >= 10) && (player1score >= 10)) {
 		document.getElementById("player1score").innerHTML = "$" + player1score +
 		" Tied!";
 		document.getElementById("player2score").innerHTML = "$" + player2score +
 		" Tied!";
+	}
+}
+
+function removeChips() {
+	for(i = 0; i < chipDisplayArray.length; i++) {
+		console.log("chipsArray i = " + i);
+		chipDisplayArray[i].className = "chips";
+		console.log("chipDisplayArray[tempChip].className = " + chipDisplayArray[tempChip].className);
 	}
 }
 
