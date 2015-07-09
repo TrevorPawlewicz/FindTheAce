@@ -110,7 +110,6 @@ document.getElementById("displayRight").addEventListener("click", function() {
 function pickCard(form) {
 	console.log("in pickCard(); deal = " + deal);
 
-
 	if (thisGameOver) {
 		alert("This game is over. Deal cards again.");
 		return;
@@ -122,8 +121,6 @@ function pickCard(form) {
 				document.images["displayRight"].src = ImageHome[randomNumRight].src;
 				alert("You have found the Ace!");
 				tallyScore();
-				//document.getElementById("chipsLeft").className += ' animated bounceIn';
-				//document.getElementById("chipsLeft").style.visibility="visible";
 			}
 			if(form === "displayLeft"){
 				document.images["displayLeft"].src = ImageHome[randomNumLeft].src;
@@ -145,8 +142,6 @@ function pickCard(form) {
 				document.images["displayLeft"].src = ImageHome[randomNumLeft].src;
 				alert("You have found the Ace!");
 				tallyScore();
-				// document.getElementById("chipsCenter1").style.visibility="visible";
-				//document.getElementById("chipsCenter1").className += ' animated bounceIn';
 			}
 			if (form === "displayCenter"){
 				document.images["displayCenter"].src = ImageHome[randomNumCenter].src;
@@ -168,16 +163,12 @@ function pickCard(form) {
 				document.images["displayCenter"].src = ImageHome[randomNumCenter].src;
 				alert("You have found the Ace!");
 				tallyScore();
-				//document.getElementById("chipsRight").style.visibility="visible";
-				//document.getElementById("chipsRight").className += ' animated bounceIn';
 			}
 		} else {
 			if(form === "displayRight") {
 				document.images["displayRight"].src = ImageHome[randomNumRight].src;
 				alert("You have found the Ace!");
 				tallyScore();
-				//document.getElementById("chipsCenter2").style.visibility="visible";
-				//document.getElementById("chipsCenter2").className += ' animated bounceIn';
 			}
 			if(form === "displayLeft") {
 				document.images["displayLeft"].src = ImageHome[randomNumLeft].src;
@@ -217,7 +208,7 @@ function animateCards(whichCard){
 	timerId = window.setTimeout("animateCards(" + (whichCard + 1)+");",60);
 }
 
-//document.getElementById("shuffleDeck").addEventListener("click", startSlideShow);
+document.getElementById("shuffleDeck").addEventListener("click", startSlideShow);
 
 function startSlideShow() {
 	if(shuffleCards === false) {
@@ -268,7 +259,7 @@ function tallyScore() {
 		player1 = false;
 		document.getElementById("player1score").innerHTML = "$" + player1score;
 		tempScore = 3;
-
+		playAudio(); // coin sound fx
 		currentPlayer1.classList.add("inactivePlayer");
 
 	} else {
@@ -276,7 +267,23 @@ function tallyScore() {
 		player1 = true;
 		document.getElementById("player2score").innerHTML = "$" + player2score;
 		tempScore = 3;
-
+		playAudio(); // coin sound fx
 		currentPlayer2.classList.add("inactivePlayer");
 	}
+
+	if ((player1score >= 10) && (player2score < 10)){
+		document.getElementById("player1score").innerHTML = "Wins $" + player1score;
+	} else if ((player2score >= 10) && (player1score < 10)) {
+		document.getElementById("player2score").innerHTML = "Wins $" + player2score;
+	} else if ((player2score >= 10) && (player1score >= 10)) {
+		document.getElementById("player1score").innerHTML = "$" + player1score +
+		" Tied!";
+		document.getElementById("player2score").innerHTML = "$" + player2score +
+		" Tied!";
+	}
+}
+
+function playAudio() {
+	var audio = new Audio('audio/cash-register-05.mp3');
+	audio.play();
 }

@@ -11,25 +11,21 @@
 	5) using various "for" loops to to populate arrays and values.
 	6) utilizing Boolean values to handle click events.
 	7) using style properties to postion and display graphics.
-	8) utilizing getElementById() to change the visibilty of images -->
+	8) utilizing getElementById() to change the visibilty of images animated
+		and audio fx -->
 
 <html>
 	<head>
 		<title>Find the Ace!</title>
 		<link rel="stylesheet" href="style.css"/>
 		<!-- animation stylesheet -->
-		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/animate.min.css"/>
 		<!-- modal stylesheet -->
-    	<link rel="stylesheet" href="css/modal-window.css" />
+    	<link rel="stylesheet" href="css/modal-window.css"/>
 	</head>
 
 	<body bgColor="#009900" onload="instructions()">
-		<!--
-	<audio>
-		<source id="introMusic" src="audio/09 SHADOW OF THE COLOSSUS.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
--->
+
 	<div class="left" id="player1"><span>Player</span> 1<p id="player1score"></p></div>
 	<div class="right" id="player2"><span>Player</span> 2<p id="player2score"></p></div>
 
@@ -45,37 +41,32 @@
 				<p></p>
 				<input type="button" id="dealCards"
 					value="Deal Cards"/>
-				<br /><br />
-			    <input type=button id="shuffleDeck"
-					value="---- Shuffle ----"
-			        onClick="return startSlideShow();"/>
-
-			    <!-- <input type=button value="Stop Shuffle"
-			           onClick="return stopSlideShow();"/> -->
+			    <input type="button" id="shuffleDeck"
+					value="Shuffle"/>
 				<p></p>
 			</form>
 		</center>
 
 		<img name="chipsFarLeft" id="chipsFarLeft" class="chips"
-			src="images/poker_chipsLeft.jpg">
+			src="images/poker_chipsLeft.png">
 		<img name="chipsLeft" id="chipsLeft" class="chips"
-			src="images/poker_chipsLeft.jpg">
+			src="images/poker_chipsLeft.png">
 		<img name="chipsCenter1" id="chipsCenter1" class="chips"
-			src="images/poker_chipsLeft.jpg">
+			src="images/poker_chipsLeft.png">
 		<img name="chipsCenter3" id="chipsCenter3" class="chips"
-			src="images/poker_chipsLeft.jpg">
+			src="images/poker_chipsLeft.png">
 		<img name="chipsCenter2" id="chipsCenter2" class="chips"
-			src="images/poker_chipsRight.jpg">
+			src="images/poker_chipsRight.png">
 		<img name="chipsCenter4" id="chipsCenter4" class="chips"
-			src="images/poker_chipsRight.jpg">
+			src="images/poker_chipsRight.png">
 		<img name="chipsRight" id="chipsRight" class="chips"
-			src="images/poker_chipsRight.jpg">
+			src="images/poker_chipsRight.png">
 		<img name="chipsFarRight" id="chipsFarRight" class="chips"
-			src="images/poker_chipsRight.jpg">
+			src="images/poker_chipsRight.png">
 
 		<!-- modal window -->
 		<div id="share-options">
-			<img src="images/cardsIntro.jpg" width="800" height="720" alt="Play!" id="message" />
+			<img src="images/cardsIntro.jpg" width="700" height="640" alt="Play!" id="message"/>
 		</div>
 
 	</body>

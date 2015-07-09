@@ -4,7 +4,7 @@ var modal = (function() {                         // Declare modal object
   var $window = $(window);                        // Store the window
   var $modal = $('<div class="modal"/>');         // Create markup for modal
   var $content = $('<div class="modal-content"/>');
-  var $close = $('<button role="button" class="modal-close">close</button>');
+  var $close = $('<button role="button" class="modal-close">PLAY</button>');
 
   $modal.append($content, $close);                // Add close button to modal
 
@@ -12,7 +12,7 @@ var modal = (function() {                         // Declare modal object
 
       // play intro audio on "close" button
       var audioObj = document.createElement("audio");
-      audioObj.src="audio/09 SHADOW OF THE COLOSSUS.mp3";
+      audioObj.src="audio/BettingTime.mp3";
       audioObj.volume=0.50;
       audioObj.autoPlay=false;
       audioObj.preLoad=true;

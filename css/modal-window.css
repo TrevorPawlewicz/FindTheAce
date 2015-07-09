@@ -15,6 +15,7 @@
     /* top,right,bottom,left */
     border-color: #E6E6E6 #474747 #000000 #A1A1A1;
     border-style: outset;
+    box-shadow: 14px 14px 20px #000000;
 }
 
 button.modal-close {
@@ -23,12 +24,12 @@ button.modal-close {
     border: none;
     border-radius: 4px;
     /* top,right,bottom,left */
-    padding: 1px 10px 1px 10px;
-    margin: 1px 0 0 0;
+    padding: 1px 50px 1px 50px;
+    margin: 16px 0 0 0; /* top,right,bottom,left */
     float: right;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.5em;
     text-transform: uppercase;
-    box-shadow: 4px 4px 4px #000000;
+    box-shadow: 6px 6px 4px #000000;
  }
 
 button.modal-close:hover {
